@@ -1,0 +1,5 @@
+﻿  main.cpp
+d:\developement\testc++\tictactoegame\game.hpp(280): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\developement\testc++\tictactoegame\game.hpp(311): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  TicTacToeGame.vcxproj -> D:\Developement\TestC++\Debug\TicTacToeGame.exe
+  TicTacToeGame.vcxproj -> D:\Developement\TestC++\Debug\TicTacToeGame.pdb (Partial PDB)
