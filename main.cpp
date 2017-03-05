@@ -1,8 +1,9 @@
 #include "Game.hpp"
+#include "TicTacToe.h"
 
 int main() {
-	
-	
+	TicTacToe2 x;
+	/*
 	TicTacToe::Player * p1 = new TicTacToe::UserPlayer();
 	TicTacToe::Player * p2 = new TicTacToe::COMPlayer("ABCD");
 	TicTacToe::Player * p3 = new TicTacToe::COMPlayer("ABCD2");
@@ -13,7 +14,7 @@ int main() {
 	while (game.isRunning()) {
 		game.process();
 		game.drawBoardGame();
-	}
+	}*/
 
 	/*
 	int countGames = 0;
@@ -31,7 +32,7 @@ int main() {
 
 
 
-	p1->save();
-	p2->save();
+	//p1->save();
+	//p2->save();
 	system("pause");
 }

@@ -16,10 +16,16 @@
     <Filter Include="game">
       <UniqueIdentifier>{e936b612-ba54-446a-b501-31ae255acec3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game_Core">
+      <UniqueIdentifier>{8e4c4f8d-f588-41b3-9828-fe1643b38ca6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBase.cpp">
+      <Filter>Game_Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +34,12 @@
     </ClInclude>
     <ClInclude Include="json.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBase.hpp">
+      <Filter>Game_Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TicTacToe.h">
+      <Filter>Game_Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

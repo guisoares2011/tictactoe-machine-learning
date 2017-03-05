@@ -1,5 +1,17 @@
-﻿  main.cpp
+﻿  GameBase.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
 d:\developement\testc++\tictactoegame\game.hpp(280): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 d:\developement\testc++\tictactoegame\game.hpp(311): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  TicTacToeGame.vcxproj -> D:\Developement\TestC++\Debug\TicTacToeGame.exe
-  TicTacToeGame.vcxproj -> D:\Developement\TestC++\Debug\TicTacToeGame.pdb (Partial PDB)
+d:\developement\testc++\tictactoegame\tictactoe.h(12): error C2977: 'GamePropertyArray': too many template arguments
+  d:\developement\testc++\tictactoegame\gamebase.hpp(31): note: see declaration of 'GamePropertyArray'
+d:\developement\testc++\tictactoegame\tictactoe.h(12): error C2514: 'GamePropertyArray': class has no constructors
+  d:\developement\testc++\tictactoegame\gamebase.hpp(31): note: see declaration of 'GamePropertyArray'
+d:\developement\testc++\tictactoegame\tictactoe.h(12): error C2660: 'GameBase::setProperty': function does not take 1 arguments
+d:\developement\testc++\tictactoegame\tictactoe.h(14): error C2977: 'GamePropertyArray': too many template arguments
+  d:\developement\testc++\tictactoegame\gamebase.hpp(31): note: see declaration of 'GamePropertyArray'
+d:\developement\testc++\tictactoegame\tictactoe.h(15): error C2662: 'void GamePropertyArray<T>::setValue(int,T)': cannot convert 'this' pointer from 'GamePropertyArray' to 'GamePropertyArray<T> &'
+  d:\developement\testc++\tictactoegame\tictactoe.h(15): note: Reason: cannot convert from 'GamePropertyArray' to 'GamePropertyArray<T>'
+  d:\developement\testc++\tictactoegame\tictactoe.h(15): note: Conversion requires a second user-defined-conversion operator or constructor
+  Generating Code...
