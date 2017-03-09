@@ -2,7 +2,8 @@
 #include "TicTacToe.h"
 
 int main() {
-	TicTacToe2 x;
+	GTicTacToe::TicTacToe x;
+	x.start();
 	/*
 	TicTacToe::Player * p1 = new TicTacToe::UserPlayer();
 	TicTacToe::Player * p2 = new TicTacToe::COMPlayer("ABCD");

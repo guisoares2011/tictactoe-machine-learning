@@ -2,32 +2,51 @@
 #define H_TIC_TAC_TOE_2
 #include "GameBase.hpp"
 
-#define RUNNING_PROPERTY 1
-#define BOARD_GAME 2
+//Properties
+#define P_RUNNING_PROPERTY 1
+#define P_BOARD_GAME 2
+#define P_CURRENT_PLAYER 3
+#define P_TYPE_GAME 4
 
-class TicTacToe2 : public GameBase {
+namespace GTicTacToe {
+	class InitEvent : public EventInterface {
 	public:
-		TicTacToe2() : GameBase() {
-			setProperty(RUNNING_PROPERTY, new GameProperty<bool>(false));
-			setProperty(BOARD_GAME, new GamePropertyArray<int, 9>());
-			
-			GamePropertyArray<int, 9> * p = static_cast<GamePropertyArray<int, 9>*>(getProperty(BOARD_GAME));
-			p->setValue(1, 2);
+		int exec(const GameStatus& status, const GamePlayers players) {
+			return EVENT_PROCESS_GAME;
+		}
+	};
+
+	class MenuEvent : public EventInterface {
+	public:
+		int exec(const GameStatus& status, const GamePlayers players) {
+			return EVENT_INIT;
+		}
+	};
+
+	class TicTacToe : public GameBase {
+	public:
+		TicTacToe() : GameBase() {
+
+			//Game Properties
+			//setProperty(P_RUNNING_PROPERTY, new GameProperty<bool>(false));
+			setProperty(P_BOARD_GAME, new BoardGame());
+			setProperty(P_CURRENT_PLAYER, new GameProperty<int>(0));
+			setProperty(P_TYPE_GAME, new GameProperty<int>(0));
+
+			//Game Events
+			setEvent(EVENT_INIT, new InitEvent());
+			setEvent(EVENT_MENU, new MenuEvent());
 		};
-		void start() {};
-		void restart() {};
+		~TicTacToe() {};
+		void start() {
+			int _event = EVENT_MENU;
+			do {
+				_event = execEvent(_event);
+			} while (_event != EMPTY_EVENT && _event != INVALID_EVENT);
+		};	
 
 	private:
-		//GameProperty<bool> * running = );
-		//GamePropertyArray<int, 10> * gameboard = new GamePropertyArray<int, 10>(NULL);
-
-	/*
-	 *************************************************
-	 *	Properties Game Tic Tac Toe					 *
-	 *************************************************
-	*/
-	// running;
-	//GameProperty<int[9]> dashboard;
-	
-};
+		typedef GamePropertyArray<int, 9> BoardGame;
+	};
+}
 #endif

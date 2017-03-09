@@ -19,6 +19,9 @@
     <Filter Include="Game_Core">
       <UniqueIdentifier>{8e4c4f8d-f588-41b3-9828-fe1643b38ca6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game_Core\TicTacToe">
+      <UniqueIdentifier>{3d8abd03-6179-4a98-a9b7-2ca268f76963}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,7 +42,7 @@
       <Filter>Game_Core</Filter>
     </ClInclude>
     <ClInclude Include="TicTacToe.h">
-      <Filter>Game_Core</Filter>
+      <Filter>Game_Core\TicTacToe</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
